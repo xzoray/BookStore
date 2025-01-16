@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(9, 83, 102);
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(255, 208, 0);
+    padding: 0 18px;
+}
+
+p {
+    margin-block: 0em;
+    font-size: 20px;
+}
+
+h1 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: rgb(164, 255, 250);
+    padding: 10px 0;
+}
+
+main {
+    text-align: center;
+    background-color: rgb(9, 37, 48);
+    flex: 1;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bookContent {
+    width: 330px;
+    height: 600px;
+    border-radius: 20px;
+    background: radial-gradient(rgb(240, 240, 11),rgb(161, 10, 10));
+    box-shadow: 8px 8px 10px 0.5px;
+}
+
+h2 {
+    margin-block: 0;
+    padding: 10px;
+}
+
+.bookImg {
+    height: 150px;
+    width: 330px;
+    object-fit: cover;
+}
+
+.priceAndLike {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+h3 {
+    margin-block: 0;
+}
+
+.likes {
+    font-size: 18px;
+    font-weight: 560;
+}
+
+.heartImg {
+    width: 16px;
+    height: auto;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(9, 83, 102);
+    height: 60px;
+}
