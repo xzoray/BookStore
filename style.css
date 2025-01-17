@@ -45,7 +45,7 @@ main {
     width: 330px;
     height: 600px;
     border-radius: 20px;
-    background: radial-gradient(rgb(240, 240, 11),rgb(161, 10, 10));
+    background: radial-gradient(rgb(240, 240, 11),rgb(146, 16, 16));
     box-shadow: 8px 8px 10px 0.5px;
 }
 
@@ -63,11 +63,17 @@ h2 {
 .priceAndLike {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 20px;
 }
 
 h3 {
     margin-block: 0;
+}
+
+.price {
+    color: white;
+    font-size: 24px;
 }
 
 .likes {
@@ -79,6 +85,17 @@ h3 {
     width: 16px;
     height: auto;
     cursor: pointer;
+}
+
+.bookData {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    padding: 10px 20px;
+}
+
+.bookKeys {
+    padding: 0 30px;
 }
 
 footer {
