@@ -13,7 +13,6 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: rgb(255, 208, 0);
     padding: 0 18px;
 }
 
@@ -25,7 +24,7 @@ p {
 h1 {
     margin-block-start: 0em;
     margin-block-end: 0em;
-    color: rgb(164, 255, 250);
+    color: rgb(255, 208, 0);
     padding: 10px 0;
 }
 
@@ -33,20 +32,22 @@ main {
     text-align: center;
     background-color: rgb(9, 37, 48);
     flex: 1;
-}
-
-.content {
+    padding-top: 28px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.bookContent {
+.booksContent {
     width: 330px;
-    height: 600px;
+    height: 580px;
     border-radius: 20px;
     background: radial-gradient(rgb(240, 240, 11),rgb(146, 16, 16));
     box-shadow: 8px 8px 10px 0.5px;
+}
+
+.content {
+    /* gap: 10px; funktioniert nicht */
 }
 
 h2 {
@@ -96,6 +97,53 @@ h3 {
 
 .bookKeys {
     padding: 0 30px;
+}
+
+h4 {
+    margin-block-start: 1em;
+    margin-block-end: 0.5em;
+}
+
+.commentSection {
+    display: flex;
+    align-items: self-start;
+    color: rgb(47, 28, 97);
+    padding: 0 20px;
+    flex-direction: column;
+}
+
+.overflowWindow {
+    border: 2px solid black;
+    height: 80px;
+    width: 270px;
+    padding: 0 10px;
+    overflow-y: auto;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sendButton {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sendButton:hover {
+    scale: 1.5;
+}
+
+.inputSection {
+    padding-top: 5px;
+    display: flex;
+}
+
+.comments {
+    width: 150px;
+    display: flex;
+    justify-content: start;
 }
 
 footer {
