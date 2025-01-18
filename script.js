@@ -1,5 +1,6 @@
 function init() {
     renderBooks();
+    renderComments();
 }
 
 function renderBooks() {
@@ -25,16 +26,14 @@ function bookTemplate(i) {
                         <p><b>Genre:</b></p>
                     </div>
                     <div class="bookKeys">
-                        <p>J.K. Rowling</p>
+                        <p>${books[i].author}</p>
                         <p>${books[i].publishedYear}</p>
-                        <p>Fantasy</p>
+                        <p>${books[i].genre}</p>
                     </div>
                 </div>
                 <div class="commentSection">
                     <h4>Comments:</h4>
-                    <div class="overflowWindow">
-                        <div class="username"><span>username:</span></div>
-                        <div class="comments"><span>Hello World!</span></div>
+                    <div id="commentsWindow" class="overflowWindow">
                     </div>
                     <div class="inputSection">
                         <input type="text" placeholder="leave a comment...">
@@ -62,4 +61,20 @@ function changeHeart(i) {
         books[i].likes = books[i].likes + 1;
         renderBooks();
     }
+}
+
+function renderComments() {
+    let commentsRef = document.getElementById('commentsWindow');
+    commentsRef.innerHTML = "";
+    for (let i = 0; i < books.length; i++) {
+        for (let j = 0; j < books[i].comments.length; j++) {
+            commentsRef.innerHTML +=  commentsTemplate(i, j)
+        }
+    }
+}
+
+function commentsTemplate(i, j) {
+    return  `<div class="username"><span>${books[i].comments[j].name}:</span></div>
+            <div class="comments"><span>${books[i].comments[j].comment}</span></div>
+            `
 }
