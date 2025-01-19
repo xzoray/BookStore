@@ -1,6 +1,5 @@
 function init() {
     renderBooks();
-    renderComments();
 }
 
 function renderBooks() {
@@ -8,6 +7,7 @@ function renderBooks() {
     bookData.innerHTML = "";
     for (let i = 0; i < books.length; i++) {
         bookData.innerHTML += bookTemplate(i);
+        renderComments(i);
     }
 }
 
@@ -33,7 +33,7 @@ function bookTemplate(i) {
                 </div>
                 <div class="commentSection">
                     <h4>Comments:</h4>
-                    <div id="commentsWindow" class="overflowWindow">
+                    <div id="commentsWindow${i}" class="overflowWindow">
                     </div>
                     <div class="inputSection">
                         <input type="text" placeholder="leave a comment...">
@@ -55,23 +55,21 @@ function changeHeart(i) {
     if (books[i].liked) {
         books[i].liked = false;
         books[i].likes = books[i].likes - 1;
-        renderBooks();
+        init();
     } else {
         books[i].liked = true;
         books[i].likes = books[i].likes + 1;
-        renderBooks();
+        init();
     }
 }
 
-function renderComments() {
-    let commentsRef = document.getElementById('commentsWindow');
+function renderComments(i) {
+    let commentsRef = document.getElementById(`commentsWindow${[i]}`);
     commentsRef.innerHTML = "";
-    for (let i = 0; i < books.length; i++) {
-        for (let j = 0; j < books[i].comments.length; j++) {
-            commentsRef.innerHTML +=  commentsTemplate(i, j)
-        }
+    for (let j = 0; j < books[i].comments.length; j++) {
+        commentsRef.innerHTML +=  commentsTemplate(i, j)
     }
-}
+ }
 
 function commentsTemplate(i, j) {
     return  `<div class="username"><span>${books[i].comments[j].name}:</span></div>

@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: rgb(9, 83, 102);
+    background-color: rgb(3, 55, 68);
     height: 70px;
     display: flex;
     justify-content: flex-start;
@@ -113,11 +113,11 @@ h4 {
     border: 2px solid black;
     height: 80px;
     width: 270px;
-    padding: 0 10px;
     overflow-y: auto;
     color: black;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
 .sendButton {
@@ -140,10 +140,10 @@ h4 {
 .comments {
     width: 150px;
     display: flex;
-    justify-content: start;
+    text-align: center;
 }
 
 footer {
-    background-color: rgb(9, 83, 102);
+    background-color: rgb(3, 55, 68);
     height: 60px;
 }
