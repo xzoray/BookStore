@@ -137,12 +137,6 @@ h4 {
     display: flex;
 }
 
-.comments {
-    width: 150px;
-    display: flex;
-    text-align: center;
-}
-
 footer {
     background-color: rgb(3, 55, 68);
     height: 60px;

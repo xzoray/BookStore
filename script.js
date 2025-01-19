@@ -36,8 +36,8 @@ function bookTemplate(i) {
                     <div id="commentsWindow${i}" class="overflowWindow">
                     </div>
                     <div class="inputSection">
-                        <input type="text" placeholder="leave a comment...">
-                        <img class="sendButton" src="img/hexagon-2307352_1280.png" alt="">
+                        <input id="input${i}" type="text" placeholder="leave a comment...">
+                        <img onclick="addComment(${i})" class="sendButton" src="img/hexagon-2307352_1280.png">
                     </div>
                 </div>
             </div>`
@@ -72,7 +72,16 @@ function renderComments(i) {
  }
 
 function commentsTemplate(i, j) {
-    return  `<div class="username"><span>${books[i].comments[j].name}:</span></div>
-            <div class="comments"><span>${books[i].comments[j].comment}</span></div>
+    return  `<div class="username"><span><b>${books[i].comments[j].name}:</b></span></div>
+            <div class="comment"><span>${books[i].comments[j].comment}</span></div>
             `
+}
+
+function addComment(i) {
+    let comment = document.getElementById(`input${i}`)
+    if (comment.value != "") {
+        books[i].comments.push({name: "Unknown", comment: comment.value})
+        renderComments(i);
+        comment.value = "";
+    }
 }
