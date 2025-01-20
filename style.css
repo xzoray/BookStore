@@ -141,3 +141,13 @@ footer {
     background-color: rgb(3, 55, 68);
     height: 60px;
 }
+
+@media (max-width: 350px) {
+    .booksContent {
+        width: 300px;
+    }
+
+    .bookImg {
+        width: 300px;
+    }
+}

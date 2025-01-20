@@ -51,11 +51,11 @@ function changeHeart(i) {
     if (books[i].liked) {
         books[i].liked = false;
         books[i].likes = books[i].likes - 1;
-        init();
+        renderBooks();
     } else {
         books[i].liked = true;
         books[i].likes = books[i].likes + 1;
-        init();
+        renderBooks();
     }
 }
 
