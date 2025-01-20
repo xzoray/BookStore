@@ -1,7 +1,3 @@
-function init() {
-    renderBooks();
-}
-
 function renderBooks() {
     let bookData = document.getElementById('content');
     bookData.innerHTML = "";
@@ -80,7 +76,7 @@ function commentsTemplate(i, j) {
 function addComment(i) {
     let comment = document.getElementById(`input${i}`)
     if (comment.value != "") {
-        books[i].comments.push({name: "Unknown", comment: comment.value})
+        books[i].comments.unshift({name: "Unknown", comment: comment.value})
         renderComments(i);
         comment.value = "";
     }
